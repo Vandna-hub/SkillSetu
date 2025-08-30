@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillSetu — Post Your Skill</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f7f9fc, #eef2f7);
+    }
+
+    .skill-card {
+      border: none;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .input-group-text {
+      background: #f1f3f5;
+      border: none;
+    }
+
+    .btn-primary {
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-weight: 600;
+    }
+
+    .btn-outline-secondary {
+      border-radius: 10px;
+      padding: 10px 18px;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: #222;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar py-1 fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <h2 style="color: white;">SkillSetu</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+        aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Browse Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="post.html">Post Your Skill</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="nav-buttons d-flex">
+        <a href="login.html" class="btn btn-login">Login</a>
+        <a href="signup.html" class="btn btn-signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+  <section class="py-5 mt-5">
+    <div class="container">
+      <h1 class="text-center mb-2">Post Your Skill</h1>
+      <p class="text-center mb-4 text-muted">Showcase your talent so people can hire you.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card skill-card p-4">
+            <form id="postForm" novalidate class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Your Name</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                  <input id="p_name" class="form-control" required>
+                  <div class="invalid-feedback">Name is required.</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Primary Skill</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-briefcase"></i></span>
+                  <select id="p_category" class="form-select" required>
+                    <option value="">Select…</option>
+                    <option>Electrician</option>
+                    <option>Plumber</option>
+                    <option>Chef</option>
+                    <option>Tutor</option>
+                    <option>Designer</option>
+                    <option>Makeup Artist</option>
+                    <option>Cleaner</option>
+                    <option>Web Development</option>
+                    <option>Graphic Design</option>
+                    <option>Digital Marketing</option>
+                  </select>
+                  <div class="invalid-feedback">Choose a category.</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Location</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                  <select id="p_location" class="form-select" required>
+                    <option value="">Select…</option>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Bengaluru</option>
+                    <option>Pune</option>
+                    <option>Jaipur</option>
+                    <option>Indore</option>
+                    <option>Khargone</option>
+                    <option>Khandwa</option>
+                    <option>Nagpur</option>
+                    <option>Mysore</option>
+                  </select>
+                  <div class="invalid-feedback">Select a location.</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Price (₹)</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                  <input id="p_price" type="number" min="50" step="50" class="form-control" required>
+                  <div class="invalid-feedback">Enter a price.</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Short Bio</label>
+                <textarea id="p_desc" class="form-control" rows="3" maxlength="200" required
+                  placeholder="Tell clients what you do… (max 200 chars)"></textarea>
+                <div class="invalid-feedback">Please write a short bio.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                  <input id="p_email" type="email" class="form-control" required>
+                  <div class="invalid-feedback">Enter a valid email.</div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                  <input id="p_phone" class="form-control" required pattern="^[0-9]{10}$" placeholder="10-digit number">
+                  <div class="invalid-feedback">Enter a valid phone number.</div>
+                </div>
+              </div>
+
+              <div class="d-grid d-md-flex gap-2 mt-3">
+                <button class="btn btn-primary w-100" type="submit">
+                  <i class="fa-solid fa-check-circle"></i> Publish Profile
+                </button>
+                <a class="btn btn-outline-secondary w-100" href="browse.html">
+                  <i class="fa-solid fa-arrow-left"></i> Back to Browse
+                </a>
+              </div>
+            </form>
+
+            <div id="postSuccess" class="alert alert-success mt-3 d-none">
+              <i class="fa-solid fa-circle-check"></i> Profile added! Redirecting to Browse…
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-center py-4 border-top bg-white">
+    <p class="mb-0 small">© 2025 SkillSetu — All Rights Reserved</p>
+  </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

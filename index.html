@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillSetu — Hire Local Skills</title>
+
+  <!-- Loads the Bootstrap framework CSS.
+   Provides ready-made grid system, buttons, forms, typography, spacing, utilities, etc.
+   This is the core CSS file you need when using Bootstrap.
+  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Preconnect tells the browser to connect early to Google Fonts’ servers for better performance. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- It doesn’t load any font itself, just speeds up loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Loads the Inter font family from Google Fonts in different weights (300, 400, 500, 600, 700).
+  Used to give your text a modern and clean typography.-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+
+<body>
+  <!-- <button id="themeToggle">🌙 Theme</button> -->
+  <nav class="navbar navbar-expand-lg custom-navbar py-1 fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+        <!-- <img src="assets/img/logo.png"  style="height: 80px;"> -->
+        <h2 style="color: white;">SkillSetu</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+        aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Browse Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="post.html">Post Your Skill</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <!-- <button class="button"><a class="btn btn-outline-secondary" href="post.html">Become a Provider</a></button> -->
+      </div>
+      <div class="nav-buttons d-flex">
+        <!-- Account Dropdown -->
+        <div class="dropdown">
+          <button class="btn btn-signup dropdown-toggle" type="button" id="accountDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Account
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown" id="accountMenu">
+            <!-- JS will control content -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <!-- Carousel -->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/slid.png" class="d-block w-100" style="left: 5%;" alt="Skill Growth">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Grow Your Skills</h2>
+          <p>Learn and hire the best service providers around you.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/slide3.png" class="d-block w-100" alt="Connect">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Connect With Experts</h2>
+          <p>Find the right talent for your needs in just a click.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/slide2.png" class="d-block w-100" alt="Opportunities">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Unlock Opportunities</h2>
+          <p>Showcase your skills and get hired easily.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <header class="hero gradient-bg text-white">
+    <div class="container py-5">
+      <div class="row align-items-center g-4 py-4">
+        <div class="col-12 col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Hire trusted local pros in minutes</h1>
+          <p class="lead opacity-95">Find electricians, tutors, designers, cooks and more — verified by your community.
+            Compare ratings, prices and availability instantly.</p>
+          <div class="d-flex gap-2">
+            <a class="btn btn-light btn-lg" href="login.html">Get Started</a>
+            <!-- Learn More button (goes to About page) -->
+            <a class="btn btn-outline-light btn-lg" href="about.html">Learn More</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="hero-card shadow-lg rounded-4 p-3 bg-white text-dark">
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary-subtle text-primary">Electrician</span>
+              <span class="badge bg-success-subtle text-success">Tutor</span>
+              <span class="badge bg-warning-subtle text-warning">Chef</span>
+              <span class="badge bg-info-subtle text-info">Designer</span>
+              <span class="badge bg-danger-subtle text-danger">Plumber</span>
+            </div>
+            <form id="quickSearch" class="row g-2">
+              <div class="col-12 col-md-6">
+                <input class="form-control form-control-lg" id="q" placeholder="Search a skill… (e.g., electrician)" />
+              </div>
+              <div class="col-6 col-md-3">
+                <select id="loc" class="form-select form-select-lg">
+                  <option value="">Location</option>
+                  <option>Delhi</option>
+                  <option>Mumbai</option>
+                  <option>Bengaluru</option>
+                  <option>Pune</option>
+                  <option>Jaipur</option>
+                </select>
+              </div>
+              <div class="col-6 col-md-3 d-grid">
+                <button class="btn btn-primary btn-lg" type="submit">Search</button>
+              </div>
+            </form>
+            <small class="text-secondary">Tip: You can filter by price, rating and category on the Browse page.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container my-5">
+    <section class="mb-5">
+      <h2 class="h4 fw-semibold mb-3">Popular Categories</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Electrician" class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-bolt fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Electrician</span>
+            <small class="text-secondary">Wiring, fixtures</small>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Tutor" class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-chalkboard-teacher fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Tutor</span>
+            <small class="text-secondary">Math, English</small>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Chef" class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-utensils fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Chef</span>
+            <small class="text-secondary">Home-cooked</small>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Designer" class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-paintbrush fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Designer</span>
+            <small class="text-secondary">UI/UX, Graphic</small>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Web Development"
+            class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-laptop-code fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Web Development</span>
+            <small class="text-secondary">Build modern, responsive websites and apps.</small>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Graphic Design"
+            class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-pen-nib fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Graphic Design</span>
+            <small class="text-secondary">Creative designs for brands and businesses.</small>
+          </a>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <a href="browse.html?category=Digital Marketing"
+            class="cat card card-hover p-3 text-decoration-none text-center">
+            <i class="fa-solid fa-bullhorn fa-2x text-primary"></i>
+            <span class="fw-semibold mt-2 d-block">Digital Marketing</span>
+            <small class="text-secondary">Reach more customers with effective strategies.</small>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="h4 fw-semibold mb-3">Trending Providers</h2>
+      <div id="cardsRow" class="row g-3"></div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <h5 class="fw-bold">SkillSetu</h5>
+      <ul class="list-unstyled small">
+        <li><a href="browse.html">Browse Skills</a> | <a href="post.html">Post Your Skill</a> | <a
+            href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="#">Terms & Conditions</a> | <a
+            href="#">Privacy</a></li>
+      </ul>
+      <div class="social-icons mt-3 mt-md-0">
+        <h6>Get In Touch</h6>
+        <a href="https://wa.me/yourNumber" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 mt-4 border-top">
+      <span class="small">© 2025 SkillSetu</span>
+    </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+
+
+  <script>
+    function updateAccountMenu() {
+      const accountMenu = document.getElementById("accountMenu");
+      accountMenu.innerHTML = "";
+      const loggedInUser = localStorage.getItem("loggedInUser");
+
+      if (loggedInUser) {
+        const user = JSON.parse(loggedInUser);
+        accountMenu.innerHTML = `
+        <li><span class="dropdown-item-text">Welcome, ${user.email}</span></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+      `;
+      } else {
+        accountMenu.innerHTML = `
+        <li><a class="dropdown-item" href="login.html">Login</a></li>
+        <li><a class="dropdown-item" href="signup.html">Signup</a></li>
+      `;
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedInUser");
+      alert("Logged out successfully!");
+      updateAccountMenu();
+      window.location.href = "index.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", updateAccountMenu);
+  </script>
+</body>
+
+</html>
