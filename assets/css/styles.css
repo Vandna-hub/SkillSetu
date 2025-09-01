@@ -1,219 +1,244 @@
-/* :root{
-  --brand:#4f46e5;
-} */
+/* ================================
+   SkillSetu Custom Theme (Purple → Blue)
+   ================================ */
+
+/* -------- Global CSS Variables -------- */
 :root {
-  --brand: black;          /* main brand color (indigo) */
-  --brand-accent: #22c55e;   /* accent color (green) */
-  --text-color: #1f2937;     /* default dark text */
-  --bg-light: #ffffff;       /* light background */
-  --bg-dark: #1e1e2f;        /* dark footer/nav background */
-  --btn-text-light: #ffffff; /* white text */
-  --btn-text-dark: #1f2937;  /* dark text */
+  --primary: #6a11cb;   /* Primary brand color (Purple) */
+  --secondary: #2575fc; /* Secondary brand color (Blue) */
+  --background: #f8f9fa;/* Page background (light gray/white) */
+  --text-dark: #212529; /* Standard dark text */
+  --text-light: #ffffff;/* Standard light/white text */
+  --accent: #22c55e;    /* Accent green (used for highlights) */
 }
 
-*{font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif}
-.logo-circle{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-}
-.gradient-bg{
-  background:linear-gradient(130deg,#4f46e5 0%,#4f1bc9 100%)
-}
-.hero .hero-card{
-  border-radius:20px
-}
-.card-hover{
-  border-radius:16px;
-  transition:transform .12s ease, box-shadow .12s ease
-}
-.card-hover:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 28px rgba(0,0,0,.08)
-}
-.cat .icon{
-  width:28px;height:28px
-}
-.badge{
-  border-radius:999px;
-  padding:.55rem .8rem
-}
-.card .price{
-  font-weight:600
-}
-.rating{
-  font-size:.95rem
-}
-#filters .form-control,#filters .form-select{border-radius:12px}
-.btn{
-  border-radius:12px
-  
+/* ---------------- Global Body ---------------- */
+body {
+  background-color: var(--background); /* Default background */
+  color: var(--text-dark);             /* Default text color */
+  font-family: 'Inter', "Segoe UI", Arial, sans-serif; /* Clean modern font */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
 }
 
-/* Navbar */
-.custom-navbar {
-  background-color: teal!important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* ---------------- Navbar ---------------- */
+.navbar {
+  background: linear-gradient(90deg, var(--primary), var(--secondary)); /* Purple → Blue gradient */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Soft shadow below navbar */
+}
+.navbar .navbar-brand {
+  font-size: 1.5rem;  /* Larger brand text */
+  font-weight: 700;   /* Bold brand */
+  color: var(--text-light) !important; /* White text for visibility */
+}
+.navbar .nav-link {
+  color: var(--text-light) !important; /* White navigation links */
+  font-weight: 500;   /* Semi-bold */
+  margin-right: 10px; /* Spacing between links */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+.navbar .nav-link:hover {
+  color: #ffe57f !important; /* Yellow highlight on hover */
 }
 
-.custom-navbar .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--brand) !important;
-}
-
-.custom-navbar .nav-link {
-  color: white !important;
-  font-weight: 500;
-  margin-right: 10px;
-  transition: color 0.3s ease;
-}
-
-.custom-navbar .nav-link:hover {
-  color: var(--brand) !important;
-}
-
-/* Navbar Buttons */
+/* ---------------- Navbar Buttons ---------------- */
 .nav-buttons .btn {
-  border-radius: 30px;
-  font-weight: 600;
-  padding: 8px 18px;
-  margin-left: 8px;
-  transition: all 0.3s ease;
+  border-radius: 30px;   /* Rounded pill style */
+  font-weight: 600;      /* Bold buttons */
+  padding: 8px 18px;     /* Internal spacing */
+  margin-left: 8px;      /* Space between buttons */
+  transition: all 0.3s ease; /* Smooth hover/active animation */
 }
-
-.btn-provider {
-  background-color: var(--brand);
-  color: var(--btn-text-light);
-  border: none;
-}
-.btn-provider:hover {
-  background-color: var(--brand-accent);
-}
-
 .btn-login {
-  /* background-color: rgb(108, 33, 207); */
-  /* border: 1px solid var(--brand); */
-  background-color: transparent;
-  border-color: #09011d;
-  border-radius: 30px;
-  padding: 10px 30px;
-  border-style: dotted;
-  color: white;
-  
+  background-color: transparent; /* Transparent background */
+  border: 1px dotted #fff;       /* White dotted border */
+  border-radius: 30px;           /* Rounded pill */
+  padding: 10px 30px;            /* Bigger padding for emphasis */
+  color: var(--text-light);      /* White text */
 }
 .btn-login:hover {
-  color: rgb(6, 90, 201)
+  color: #ffe57f; /* Yellow text on hover */
 }
-
 .btn-signup {
-  background-color:#4f46e5 ;
-  border: none;
-  color: white;
+  background: linear-gradient(45deg, var(--primary), var(--secondary)); /* Gradient background */
+  border: none;              /* No border */
+  color: var(--text-light);  /* White text */
 }
 .btn-signup:hover {
-  background-color: rgb(6, 90, 201);
+  background: linear-gradient(45deg, #3a3fba, #6c70e8); /* Darker gradient on hover */
 }
 
- /* Contact Form */
+/* ---------------- General Buttons ---------------- */
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary), var(--secondary)); /* Purple → Blue */
+  border: none;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  border-radius: 10px;  /* Rounded corners */
+  padding: 10px 18px;   /* Button padding */
+  font-weight: 600;     /* Bold text */
+}
+.btn-primary:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* Stronger shadow */
+}
+.btn-outline-secondary {
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 18px;  /* Internal spacing */
+  font-weight: 500;    /* Medium bold text */
+  border: 1px solid #ccc; /* Gray outline */
+}
 .btn-gradient {
-      background: linear-gradient(45deg, #4e54c8, #8f94fb);
-      border: none;
-      color: white;
-      border-radius: 30px;
-      transition: all 0.3s ease-in-out;
-    }
-    .btn-gradient:hover {
-      background: linear-gradient(45deg, #3a3fba, #6c70e8);
-      transform: scale(1.05);
-    }
-/* Footer */
+  background: linear-gradient(45deg, #4e54c8, #8f94fb); /* Gradient purple/blue */
+  border: none;
+  color: var(--text-light);
+  border-radius: 30px; /* Pill style */
+  transition: all 0.3s ease-in-out;
+}
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #3a3fba, #6c70e8); /* Darker hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+/* ---------------- Cards ---------------- */
+.card, .skill-card, .hero-card {
+  border: none;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Light shadow */
+  background: rgba(255, 255, 255, 0.9);   /* Semi-transparent white */
+  backdrop-filter: blur(6px);             /* Glassmorphism effect */
+  transition: transform 0.3s ease;
+}
+.card:hover, .skill-card:hover, .hero-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+.card-hover {
+  border-radius: 16px;
+  transition: transform .12s ease, box-shadow .12s ease; /* Fast hover transition */
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.08); /* Stronger hover shadow */
+}
+.card .price {
+  font-weight: 600; /* Bold price text */
+}
+.rating {
+  font-size: .95rem; /* Slightly smaller rating text */
+}
+
+/* ---------------- Services ---------------- */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+.service-card:hover {
+  transform: translateY(-8px); /* Stronger lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+}
+
+/* ---------------- Carousel ---------------- */
+.carousel-item img {
+  height: 500px;     /* Fixed height for consistency */
+  object-fit: cover; /* Crop image nicely */
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  padding: 15px;
+  border-radius: 10px; /* Rounded background */
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero.gradient-bg {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); /* Diagonal gradient */
+  color: #fff;           /* White text */
+  width: 100%;           /* Full width */
+  min-height: 50vh;      /* Half screen height */
+  display: flex;         /* Flexbox center */
+  align-items: center;   /* Vertical alignment */
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.hero-card {
+  background: #fff; /* White hero card */
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+}
+
+/* ---------------- FAQ ---------------- */
+#faq .accordion-button {
+  font-weight: bold; /* Bold text for questions */
+}
+
+/* ---------------- Provider Images ---------------- */
+.provider-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;   /* Circular shape */
+  object-fit: cover;    /* Maintain aspect ratio */
+  margin: 10px auto;    /* Center align */
+  display: block;
+}
+
+/* ---------------- Forms ---------------- */
+.form-label {
+  font-weight: 600;         /* Bold labels */
+  color: var(--text-dark);  /* Dark text */
+}
+.input-group-text {
+  background: #f1f3f5; /* Light gray background */
+  border: none;        /* No border */
+  font-weight: 500;    /* Medium bold text */
+}
+.form-control:focus {
+  border-color: var(--primary); /* Purple border */
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.5); /* Purple glow */
+}
+#filters .form-control, 
+#filters .form-select {
+  border-radius: 12px; /* Rounded filter fields */
+}
+
+/* ---------------- Footer ---------------- */
 footer {
-  background: var(--bg-dark);
-  color: var(--btn-text-light);
-  padding: 50px 0;
+  background: linear-gradient(90deg, var(--primary), var(--secondary)); /* Gradient footer */
+  color: var(--text-light); /* White text */
+  padding: 40px 0;
   text-align: center;
-  
 }
-
 footer h5, footer h6 {
-  font-weight: 700;
+  font-weight: 700; /* Bold headings */
 }
-
 footer a {
-  color: var(--btn-text-light);
+  color: #ffe57f;   /* Yellow links */
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 footer a:hover {
-  color: var(--brand-accent);
+  text-decoration: underline; /* Underline on hover */
 }
-
 footer .social-icons a {
-  font-size: 20px;
-  margin: 0 10px;
-  color: var(--btn-text-light);
+  font-size: 20px;    /* Bigger icons */
+  margin: 0 10px;     /* Space between icons */
+  color: var(--text-light);
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 footer .social-icons a:hover {
-  color: var(--brand-accent);
-  transform: translateY(-3px);
+  color: #ffe57f;       /* Yellow on hover */
+  transform: translateY(-3px); /* Lift effect */
 }
 
-
-.provider-img {
-  width: 120px;        /* fixed size */
-  height: 120px;
-  border-radius: 50%;  /* make it circular */
-  object-fit: cover;   /* crop without distortion */
-  margin: 10px auto;   /* center with spacing */
-  display: block;
-}
- 
-    
 /* ---------------- Dark Theme ---------------- */
 .dark-theme {
-  background-color: #121212;
-  color: #f1f1f1;
+  background-color: #121212; /* Dark background */
+  color: #f1f1f1;           /* Light text */
 }
-
 .dark-theme .navbar {
-  background-color: #1e1e1e;
+  background-color: #1e1e1e; /* Dark navbar */
 }
-
 .dark-theme a {
-  color: #ddd;
+  color: #ddd; /* Gray links */
 }
-
 .dark-theme button {
-  background-color: #333;
-  color: #f1f1f1;
-}
-
-
-/* Carousel */
-.carousel-item img {
-  height: 500px;
-  object-fit: cover;
-}
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* Services */
-.service-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* FAQ */
-#faq .accordion-button {
-  font-weight: bold;
+  background-color: #333; /* Dark button */
+  color: #f1f1f1;         /* White text */
 }
